@@ -10,21 +10,33 @@
             background-color: black;
             justify-content: center;
             align-items: center;
-            flex-direction: row;
+            flex-direction: column;
             height: 100vh;
             margin: 0;
-            gap: 30px;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            background-color: black;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            padding: 20px;
+            gap: 20px;
+            border: 1px solid rgb(52, 52, 52);
+            border-radius: 20px;
+            max-width: 90%;
         }
         .main {
             display: flex;
             flex-direction: column;
             gap: 10px;
+            text-align: left;
         }
         .flyright {
-            display: inline-block;
             font-family: Arial, sans-serif;
             font-weight: bold;
-            font-size: 2vw;
+            font-size: 2rem;
         }
         .fly {
             color: white;
@@ -34,36 +46,39 @@
         }
         .logo {
             border-radius: 10px;
+            max-width: 220px;
+            width: 100%;
         }
         .subtitle {
             color: gray;
             font-family: Arial, sans-serif;
-            font-size: 1vw;
+            font-size: 1rem;
         }
         .testflightimg {
-            border-style: solid;
-            border-color: rgb(52, 52, 52);
-            border-width: 1px;
+            border: 1px solid rgb(52, 52, 52);
             border-radius: 10px;
+            max-width: 160px;
+            width: 100%;
         }
-        .container {
-            display: flex;
-            background-color: black;
-            justify-content: center;
-            align-items: center;
-            flex-direction: row;
-            padding: 20px;
-            gap: 30px;
-            border-style: solid;
-            border-color: rgb(52, 52, 52);
-            border-width: 1px;
-            border-radius: 20px;
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .flyright {
+                font-size: 1.8rem;
+            }
+            .subtitle {
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="images/FlyRight.png" class="logo" width="220">
+        <img src="images/FlyRight.png" class="logo">
         <div class="main">
             <div class="flyright">
                 <span class="fly">Fly</span><span class="right">Right</span>
@@ -71,7 +86,7 @@
             <div class="subtitle">The best flightsim companion app.</div>
             <div class="subtitle">Features: <br/>• Create logs and checklists <br/> • Convert aviation units.</div>
             <a href="https://testflight.apple.com/join/K5DkZ8PP">
-                <img src="images/testflight.png" class="testflightimg" width="160">
+                <img src="images/testflight.png" class="testflightimg">
             </a>
         </div>
     </div>
